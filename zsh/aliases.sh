@@ -1,4 +1,12 @@
-alias push='git publish'
+function git_current() {
+    git branch --show-current
+}
+
+function git_track() {
+    git branch --set-upstream-to=origin/$(git_current) $(git_current)
+}
+
+alias push='git push origin $(git_current)'
 alias pull='git pull'
 alias ts='tig status'
 alias pr='gh pr create'
@@ -7,7 +15,7 @@ alias gcm='git checkout main'
 alias gcma='git checkout master'
 alias gcp='git checkout production'
 alias clone='gh repo clone'
-alias git-track='function _gittrack(){ git branch --set-upstream-to=origin/"$1" "$1";};_gittrack'
+alias git-track='git_track'
 alias c='clear'
 alias m='python manage.py'
 alias emberts='ember t -s --filter $1'
