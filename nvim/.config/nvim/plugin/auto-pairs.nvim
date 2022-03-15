@@ -1,5 +1,0 @@
-lua << EOF
-
-require('auto-pairs').setup()
-
-EOF
