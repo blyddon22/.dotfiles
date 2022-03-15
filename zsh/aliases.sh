@@ -1,4 +1,4 @@
-alias push='git publish'
+alias push='git push origin'
 alias pull='git pull'
 alias ts='tig status'
 alias pr='gh pr create'
