@@ -22,12 +22,30 @@ set smartcase
 set ignorecase
 
 call plug#begin('~/.vim/plugged')
+" Linting for now...?
+Plug 'dense-analysis/ale'
+
+" LSP Stuff
 Plug 'neovim/nvim-lspconfig'          
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+
+" Snippets
+Plug 'rafamadriz/friendly-snippets'
+
+" telescope stuff
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+" gruvy
 Plug 'gruvbox-community/gruvbox'
+
+" etc
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
@@ -37,6 +55,8 @@ call plug#end()
 colorscheme gruvbox
 
 let mapleader = " "
+
+lua require("lua_modules")
 
 " Visually move text
 vnoremap J :m '>+1<CR>gv=gv

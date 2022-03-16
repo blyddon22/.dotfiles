@@ -75,7 +75,10 @@ plugins=(
     ember-cli
     nvm
     yarn
+    tmux
 )
+
+ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
