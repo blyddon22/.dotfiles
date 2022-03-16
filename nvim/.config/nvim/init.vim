@@ -48,7 +48,6 @@ Plug 'gruvbox-community/gruvbox'
 " etc
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
 Plug 'osyo-manga/vim-over'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
@@ -57,7 +56,12 @@ colorscheme gruvbox
 
 let mapleader = " "
 
-lua require("lua_modules")
+lua << EOF
+
+require('nvim_comment').setup()
+require("lua_modules")
+
+EOF
 
 " Setup Ale fixers
 let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
