@@ -50,6 +50,7 @@ Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'osyo-manga/vim-over'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 colorscheme gruvbox
@@ -57,6 +58,9 @@ colorscheme gruvbox
 let mapleader = " "
 
 lua require("lua_modules")
+
+" Setup Ale fixers
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
 
 " Visually move text
 vnoremap J :m '>+1<CR>gv=gv
