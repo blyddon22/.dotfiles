@@ -92,3 +92,6 @@ nnoremap <silent> <C-l> :wincmd l<CR>
 
 " Use space to go back to previous buffer
 nnoremap <Leader><Space> <C-^><CR>
+
+" Run alefix with flick of the wrist
+nnoremap <Leader>af :ALEFix<CR>
