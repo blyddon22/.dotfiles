@@ -79,17 +79,12 @@ local function config(_config)
 			Nnoremap("<leader>vrr", ":lua vim.lsp.buf.references()<CR>")
 			Nnoremap("<leader>vrn", ":lua vim.lsp.buf.rename()<CR>")
 			Inoremap("<C-h>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
+			Nnoremap("<leader>f", ":lua vim.lsp.buf.formatting()<CR>")
 		end,
 	}, _config or {})
 end
 
 require'lspconfig'.pyright.setup(config())
-
-require("lspconfig").emmet_ls.setup({
-    capabilities = capabilities,
-    filetypes = { "html", "css", "typescriptreact", "javascriptreact" },
-})
-
-require'lspconfig'.ember.setup(config())
+require'lspconfig'.eslint.setup(config())
 
 require("luasnip.loaders.from_vscode").lazy_load()

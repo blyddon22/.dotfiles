@@ -72,10 +72,8 @@ ZSH_THEME="intheloop"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git 
-    ember-cli
-    nvm
-    yarn
     tmux
+    zsh-syntax-highlighting
 )
 
 ZSH_TMUX_AUTOSTART=true

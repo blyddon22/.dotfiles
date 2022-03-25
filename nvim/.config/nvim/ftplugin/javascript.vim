@@ -5,3 +5,5 @@ setlocal smarttab
 setlocal expandtab
 
 set commentstring=//\ %s
+
+let b:ale_fixers = ['prettier', 'eslint']
