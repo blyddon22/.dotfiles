@@ -60,7 +60,7 @@ let mapleader = " "
 
 lua << EOF
 
-require('nvim_comment').setup()
+require('nvim_comment').setup({comment_empty = false})
 require('nvim-autopairs').setup{}
 require("lua_modules")
 
