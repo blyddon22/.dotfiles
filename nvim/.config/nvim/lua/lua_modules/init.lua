@@ -84,7 +84,13 @@ local function config(_config)
 	}, _config or {})
 end
 
+require("nvim-lsp-installer").setup(config({
+  automatic_installation = true
+}))
 require'lspconfig'.pyright.setup(config())
 require'lspconfig'.eslint.setup(config())
+require'lspconfig'.tailwindcss.setup(config())
+require'lspconfig'.quick_lint_js.setup(config())
+require'lspconfig'.ember.setup(config())
 
 require("luasnip.loaders.from_vscode").lazy_load()
