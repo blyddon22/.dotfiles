@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+
 brew "aspell"
 brew "ctags"
 brew "gh"
@@ -21,6 +22,8 @@ brew "tmux"
 brew "vim"
 brew "zlib"
 brew "zsh"
+brew "go"
+
 cask "iterm2"
 cask "karabiner-elements"
 cask "postgres"
