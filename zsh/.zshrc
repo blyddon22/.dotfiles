@@ -73,7 +73,6 @@ ZSH_THEME="intheloop"
 plugins=(
     git 
     tmux
-    zsh-syntax-highlighting
 )
 
 ZSH_TMUX_AUTOSTART=true
@@ -112,3 +111,11 @@ export NVM_DIR="$HOME/.nvm"
 
 source ~/.dotfiles/zsh/aliases.sh
 source ~/.dotfiles/zsh/work-aliases.sh
+source /Users/braxtonlyddon/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.asdf/asdf.sh
+
+export GOPATH=$HOME/dev/go_workspace
+export GOPRIVATE=github.com/Workiva
+
+#Path export
+export PATH="$PATH:$GOPATH/bin:$HOME/.pub-cache/bin"

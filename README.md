@@ -29,10 +29,12 @@
  - brew install github cli `brew install gh`
  - clone dotfiles
  - from dotfiles repo, `brew bundle`
+ - install oh-my-zsh '$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+ - zsh-syntax-highlighting needs to be cloned to the zsh plugins directory for it to work.
+  - https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#in-your-zshrc
  - stow dotfiles directories
  - install VimPlug, run vim and run PlugInstall
  - install lsp servers (this should happen automatically now)
 
 ## Some gotchas
  - might have to add something to zshrc to get nvm working... seems it has changed recently..?
- - zsh-syntax-highlighting may or may not need to be cloned to the zsh plugins directory for it to work.
