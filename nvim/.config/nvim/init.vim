@@ -49,7 +49,6 @@ Plug 'gruvbox-community/gruvbox'
 " etc
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-surround'
-Plug 'osyo-manga/vim-over'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'thinca/vim-qfreplace'
 Plug 'windwp/nvim-autopairs'
@@ -98,3 +97,8 @@ nnoremap <Leader><Space> <C-^><CR>
 
 " Run alefix with flick of the wrist
 nnoremap <Leader>af :ALEFix<CR>
+
+" Find Replace remaps
+vnoremap <Leader>fr y:s/
+nnoremap <Leader>fr :%s/
+nnoremap <expr> <Leader>rw ':<C-u>%s/' . expand('<cword>') . '/'

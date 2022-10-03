@@ -92,5 +92,7 @@ require'lspconfig'.eslint.setup(config())
 require'lspconfig'.tailwindcss.setup(config())
 require'lspconfig'.quick_lint_js.setup(config())
 require'lspconfig'.ember.setup(config())
+require'lspconfig'.gopls.setup(config())
+require'lspconfig'.dartls.setup(config())
 
 require("luasnip.loaders.from_vscode").lazy_load()
