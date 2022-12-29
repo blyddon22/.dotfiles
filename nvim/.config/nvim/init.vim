@@ -17,9 +17,10 @@ set incsearch
 set termguicolors
 set scrolloff=4
 set signcolumn=yes
-set colorcolumn=80
 set smartcase
 set ignorecase
+set winwidth=90
+set winminwidth=30
 
 call plug#begin('~/.vim/plugged')
 " Linting for now...?
