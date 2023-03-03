@@ -119,3 +119,5 @@ export GOPRIVATE=github.com/Workiva
 
 #Path export
 export PATH="$PATH:$GOPATH/bin:$HOME/.pub-cache/bin"
+#Fix dart
+ulimit -n 8192 && rm -rf app/.dart_tool
