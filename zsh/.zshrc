@@ -73,6 +73,7 @@ ZSH_THEME="intheloop"
 plugins=(
     git 
     tmux
+    direnv
 )
 
 ZSH_TMUX_AUTOSTART=true
@@ -121,3 +122,12 @@ export GOPRIVATE=github.com/Workiva
 export PATH="$PATH:$GOPATH/bin:$HOME/.pub-cache/bin"
 #Fix dart
 ulimit -n 8192 && rm -rf app/.dart_tool
+
+export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
+
+source ~/.wk/profile
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
+export JAVA_HOME=$HOME/.asdf/installs/java/corretto-21.0.1.12.1
+
+# export GOTOOLCHAIN=go1.22.3 go version
