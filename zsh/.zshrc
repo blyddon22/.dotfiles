@@ -73,6 +73,8 @@ ZSH_THEME="intheloop"
 plugins=(
     git 
     tmux
+    direnv
+    nvm
 )
 
 ZSH_TMUX_AUTOSTART=true
@@ -106,8 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 source ~/.dotfiles/zsh/aliases.sh
 source ~/.dotfiles/zsh/work-aliases.sh
@@ -121,3 +123,12 @@ export GOPRIVATE=github.com/Workiva
 export PATH="$PATH:$GOPATH/bin:$HOME/.pub-cache/bin"
 #Fix dart
 ulimit -n 8192 && rm -rf app/.dart_tool
+
+export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
+
+source ~/.wk/profile
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
+export JAVA_HOME=$HOME/.asdf/installs/java/corretto-21.0.1.12.1
+
+# export GOTOOLCHAIN=go1.22.3 go version

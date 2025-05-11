@@ -1,3 +1,4 @@
 nvim/.config/nvim/lua/lua_modules/node_modules/*
 nvim/.config/nvim/lua/lua_modules/package-lock.json
 nvim/.config/gh/hosts.yml
+nvim/.config/github-copilot/*
