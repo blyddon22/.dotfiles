@@ -29,13 +29,34 @@ return {
             },
           },
         },
-      }
+      },
+      { "mason-org/mason.nvim" },
+      {
+        "mason-org/mason-lspconfig.nvim",
+        opts = {
+          ensure_installed = { "lua_ls", "gopls", "jdtls" },
+        },
+        dependencies = {
+          { "mason-org/mason.nvim", opts = {} },
+          "neovim/nvim-lspconfig",
+        },
+      },
+      { "mfussenegger/nvim-jdtls" },
     },
     config = function()
       local capabilities = require('blink.cmp').get_lsp_capabilities()
-      require("lspconfig").lua_ls.setup { capabilities = capabilities }
-      require("lspconfig").gopls.setup { capabilities = capabilities }
-      require("lspconfig").dartls.setup { capabilities = capabilities }
+
+      -- Set global capabilities for all LSP servers
+      vim.lsp.config("*", {
+        capabilities = capabilities,
+      })
+
+      vim.lsp.config('jdtls', { cmd = { 'jdtls' } })
+
+      vim.lsp.enable('dartls')
+      vim.lsp.enable('jdtls')
+      vim.lsp.enable('ts_ls')
+      -- vim.lsp.enable('harper_ls')
 
       vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
     end,

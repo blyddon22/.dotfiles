@@ -20,6 +20,8 @@ alias c='clear'
 alias m='python manage.py'
 alias emberts='ember t -s --filter $1'
 alias eft='ember exam --split=2 --parallel --silent'
+alias tls='tmux ls'
+alias tfun='tmux new -Asfun'
 
 alias aliases='nvim ~/.dotfiles/zsh/aliases.sh'
 alias dotfiles='cd ~/.dotfiles'

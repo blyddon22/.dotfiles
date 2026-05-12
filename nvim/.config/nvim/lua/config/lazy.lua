@@ -31,3 +31,28 @@ require("lazy").setup({
     enabled = false,
   },
 })
+
+-- Disable automatic previews.
+require("markview").setup({
+    preview = { enable = false }
+});
+
+-- Automatically check for file changes when:
+-- 1. Focusing the window (FocusGained)
+-- 2. Entering a buffer (BufEnter)
+-- 3. The cursor is idle (CursorHold)
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  callback = function()
+    if vim.fn.mode() ~= 'c' then
+      vim.cmd('checktime')
+    end
+  end,
+})
+
+-- (Optional) Send a notification when a file is reloaded
+vim.api.nvim_create_autocmd("FileChangedShellPost", {
+  callback = function()
+    vim.notify("File changed on disk. Buffer reloaded.", vim.log.levels.WARN)
+  end,
+})
+

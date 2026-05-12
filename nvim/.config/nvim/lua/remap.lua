@@ -31,3 +31,6 @@ vim.keymap.set("v", "<leader>fr", "y:s/")
 vim.keymap.set("n", "<leader>fr", ":%s/")
 
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
+
+-- Toggle `markview` previews globally.
+vim.api.nvim_set_keymap("n", "<leader>m", "<CMD>Markview<CR>", { desc = "Toggles `markview` previews globally." });

@@ -77,7 +77,9 @@ plugins=(
     nvm
 )
 
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_DEFAULT_SESSION_NAME="work"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,5 +132,4 @@ source ~/.wk/profile
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 export JAVA_HOME=$HOME/.asdf/installs/java/corretto-21.0.1.12.1
-
-# export GOTOOLCHAIN=go1.22.3 go version
+export PATH="$HOME/.local/bin:$PATH"
